@@ -1,4 +1,26 @@
 # Programming a Real Self-Driving Car
+---
+The goal of the project to integrate several sub-systems of a self-driving car using the Robot Operative System (ROS) framework.
+
+## Demo
+
+I used the provided ubuntu image from Udacity [here]() to run my code, and I used my Ubuntu host machine to run the simulator.
+The full demo is at [](https://youtu.be/lRTAEgUJmEw)
+
+## Implementation details
+
+### System Architecture Diagram
+
+![System Architecture Diagram](./images/final-project-ros-graph-v2.png)
+
+
+### Autonomous vehicle architecture
+![architecture](./images/autonomous_vehicle_architecture.png)
+
+Topic	Msg Type	Notes
+/base_waypoints	styx_msgs/Lane	Waypoints as provided by a static .csv file.
+/current_pose	geometry_msgs/PoseStamped	Current position of the vehicle, provided by the simulator or localization.
+/final_waypoints	styx_msgs/Lane	This is a subset of /base_waypoints. The first waypoint is the one in /base_waypoints which is closest to the car.
 
 ### Native Installation
 
@@ -86,3 +108,7 @@ Specific to these libraries, the simulator grader and Carla use the following:
 | OpenMP | N/A | N/A |
 
 We are working on a fix to line up the OpenCV versions between the two.
+
+
+chmod -R +x ./src
+sudo apt-get install python-scipy
