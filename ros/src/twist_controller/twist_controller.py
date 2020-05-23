@@ -68,12 +68,11 @@ class Controller(object):
             throttle = 0.0
             # Carla has an automatic transmission, which means the car will roll forward if no brake and no throttle is
             # applied. To prevent Carla from moving requires about 700 Nm of torque.
-            brake = 400  # N*m --> to hold the car in place if we are stopped at a light
+            brake = 700  # N*m --> to hold the car in place if we are stopped at a light
         elif throttle < 0.1 and vel_error < 0.0:
             throttle = 0.0
             decel = max(vel_error, self.accel_limit)
-            brake = abs(decel) * self.wheel_radius * self.vehicle_mass #Torque N*m
-
+            brake = abs(decel) * self.wheel_radius * self.vehicle_mass  # Torque N*m
 
         # Return throttle, brake, steer
-        return 1., 0., 0.
+        return throttle, brake, steering
