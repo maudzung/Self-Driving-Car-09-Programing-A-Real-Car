@@ -39,7 +39,7 @@ class WaypointUpdater(object):
         # The waypoint_follower will run with freq = 30Hz
         rate = rospy.Rate(50)
         while not rospy.is_shutdown():
-            if self.pose and self.base_waypoints:
+            if self.pose and self.base_waypoints and self.waypoint_tree:
                 closest_waypoint_idx = self.get_closest_waypoint_idx()
                 self.publish_waypoints(closest_waypoint_idx)
             rate.sleep()
