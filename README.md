@@ -120,6 +120,15 @@ Add execute mode to *py
 chmod -R +x ./ros/src
 ```
 
+Initialize the catkin workspace:
+
+```bash
+cd ros/src
+rm CMakeLists.txt
+catkin_init_workspace
+```
+
+Build and execute:
 ```bash
 cd ros
 catkin_make
