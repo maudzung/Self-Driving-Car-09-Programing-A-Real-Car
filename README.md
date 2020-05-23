@@ -14,6 +14,7 @@ I used the provided ubuntu image from Udacity [here](https://s3-us-west-1.amazon
 to run my code, and I used my Ubuntu host machine to run the simulator.
 
 ![demo](./images/demo.gif)
+
 The full demo is at [https://youtu.be/lRTAEgUJmEw](https://youtu.be/lRTAEgUJmEw)
 
 ## Implementation details
