@@ -15,7 +15,7 @@ to run my code, and I used my Ubuntu host machine to run the simulator.
 
 ![demo](./images/demo.gif)
 
-The full demo is at [https://youtu.be/lRTAEgUJmEw](https://youtu.be/lRTAEgUJmEw)
+The full demo is at [https://youtu.be/M0uoezBJdqM](https://youtu.be/M0uoezBJdqM)
 
 ## Implementation details
 
